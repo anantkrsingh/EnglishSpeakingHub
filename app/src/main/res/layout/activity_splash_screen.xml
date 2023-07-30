@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:transitionName="bg"
+    tools:context=".Screens.SplashScreen">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="15dp"
+        android:padding="15dp"
+        android:id="@+id/splashLogo"
+        android:transitionName="logo"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@drawable/audio_wave"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

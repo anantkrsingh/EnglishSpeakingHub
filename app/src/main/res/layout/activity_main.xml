@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_bg"
+    tools:context=".MainActivity">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/text_input_bg"
+            android:elevation="0dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="64dp"
+                android:layout_height="44dp"
+                app:cardCornerRadius="15dp"
+                android:padding="15dp"
+                android:id="@+id/homeLogo"
+                android:transitionName="logo"
+                android:layout_centerInParent="true"
+                app:cardBackgroundColor="@color/white"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_round_person_24"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/app_name"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="base"
+        android:orientation="vertical"
+        android:id="@+id/base"
+        android:gravity="center_horizontal"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_margin="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/text_input_bg">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/search"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/searchRoom"
+                android:hint="Search for a Room"
+                android:fontFamily="@font/rubik_regular"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/black"
+                android:maxLines="1"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_regular"
+            android:id="@+id/no_rooms"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="No Rooms Available..."/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/roomsRV"
+            tools:itemCount="10"
+            tools:listitem="@layout/meetings_item"/>
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:id="@+id/newMeeting"
+        app:icon="@drawable/ic_round_add_24"
+        android:text="New"
+        android:layout_margin="20dp"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

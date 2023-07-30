@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:outlineSpotShadowColor="@color/black"
+    app:strokeColor="@color/black"
+    app:strokeWidth="1px"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/roomTitle"
+                android:fontFamily="@font/rubik_regular"
+                android:textStyle="bold"
+                android:text="Room Title"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+
+                android:layout_alignParentEnd="true">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:padding="3sp"
+                    android:src="@drawable/user"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/currentUsers"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="24"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/room_bg">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="5"
+                tools:listitem="@layout/joined_avatars_items" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/roomHost"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@android:color/black"
+                    android:padding="2dp"
+                    android:text="Host: Anant Kumar"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/roomLimit"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/rubik_regular"
+                    android:padding="2dp"
+                    android:text="Limit : No Limit"/>
+
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/black"
+                android:layout_toStartOf="@id/cardJoin"
+                android:layout_marginEnd="10dp"
+                android:padding="10dp"
+                android:id="@+id/btnShareRoom"
+                app:strokeColor="@android:color/darker_gray"
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:tint="@color/white"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/share"
+                    tools:ignore="UseAppTint" />
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/black"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/cardJoin"
+                app:strokeColor="@android:color/darker_gray"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnJoin"
+                    android:text="JOIN"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"/>
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:id="@+id/ads"
+            android:visibility="gone">
+
+        </FrameLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

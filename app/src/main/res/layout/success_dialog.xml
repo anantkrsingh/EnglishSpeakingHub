@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_margin="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/round_bg">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email_sent"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="success.json"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:id="@+id/successPrompt"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/email_sent_prompt"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/dismissSuccess"
+            android:text="Dismiss"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:id="@+id/resendEmail"
+            android:text="Resend"/>
+    </LinearLayout>
+
+</LinearLayout>

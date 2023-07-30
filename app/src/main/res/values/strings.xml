@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">English Speaking Hub</string>
+    <string name="logintitle">Please Login To Continue...</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="details">Please Enter Few Details To Get Started</string>
+    <string name="error">Some Error Occured</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="email_sent">Email Sent</string>
+    <string name="email_sent_prompt">An Email Has Been Sent To You Containing A Verification Link</string>
+    <string name="upgrade_to_premium">Upgrade To Premium</string>
+    <string name="premium_para">Upgrade to Premium To Enjoy Unlimited Video or Audio Chats</string>
+    <string name="free_account_slogan">Free Account Has a Limit of 30 Minutes Per Day...</string>
+    <string name="resend">Resend</string>
+</resources>
